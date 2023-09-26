@@ -18,6 +18,7 @@ A collection of articles covering topics about programming and education (in spa
 [<img src="https://cdn3.iconfinder.com/data/icons/tiny-charts-and-graphs/32/flat_line_graph-512.png"  width="90" height="90" align="left">](posts/2022/2022-10-12-causal_impact.ipynb)
 *CausalImpact* creado por Google estima el impacto de una intervención en una serie temporal.<br>
 [Continue reading ➔](posts/2022/2022-10-12-causal_impact.ipynb) 
+<br><br>
 
 ### Collaborative Filtering
 
@@ -26,6 +27,7 @@ A collection of articles covering topics about programming and education (in spa
 [<img src="https://icons-for-free.com/iconfiles/ico/256/color+cinema+icons+Documentary-1320567852829864650.ico"  width="90" height="90" align="left">](posts/2022/2022-10-12-implicit.ipynb)
 *User-based collaborative filtering* para realizar un mejor sistema de recomendación de películas. <br>
 [Continue reading ➔](posts/2022/2022-10-12-implicit.ipynb)
+<br><br>
 
 ### Test Driven Development
 
@@ -34,6 +36,7 @@ A collection of articles covering topics about programming and education (in spa
 [<img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=60719"  width="90" height="90" align="left">](https://medium.com/@fralfaro/qu%C3%A9-es-el-test-driven-development-7d45160a5a5a)
 Cómo abordar el desarrollo de software para Data Science usando Test Driven Development. <br>
 [Continue reading ➔](posts/2022/2021-07-15-tdd.ipynb)
+<br><br>
 
 
 ### Polars
@@ -44,6 +47,7 @@ Cómo abordar el desarrollo de software para Data Science usando Test Driven Dev
 [<img src="https://www.rust-lang.org/logos/rust-logo-512x512.png"  width="90" height="90" align="left">](https://fralfaro.github.io/ds_blog/python/2022/03/16/polars.html)
 Polars es una librería de DataFrames increíblemente rápida y eficiente  implementada en Rust.<br>
 [Continue reading ➔](posts/2022/2022-03-16-polars.ipynb)
+<br><br>
 
 
 ## 2021
@@ -69,10 +73,6 @@ Fastpages es una plataforma que te permite crear y alojar un blog con Jupyter No
 ### Buenas Prácticas
 
 🐍 Python  📅 Aug 15, 2021 🕒  10 min read
-
-:fontawesome-brands-python: FastPages
-:octicons-calendar-24: Aug 15, 2021
-:octicons-clock-24: 5 min read
 
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2048px-Python.svg.png"  width="90" height="90" align="left">](https://fralfaro.github.io/ds_blog/python/2022/03/16/polars.html)
 Consejos que te ayudarán a mejorar tus skills en el desarrollo de software (con Python).<br>
