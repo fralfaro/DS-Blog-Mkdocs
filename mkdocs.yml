@@ -1,0 +1,104 @@
+# Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+# Project information
+site_name: DS Blog
+site_url: https://github.com/fralfaro/DS-Blog
+site_author: Francisco Alfaro
+site_description:
+
+# Repository
+repo_name: fralfaro/DS-Blog
+repo_url: https://github.com/fralfaro/DS-Blog
+edit_uri: ''
+
+# Markdown extensions
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - neoteroi.cards
+  - neoteroi.timeline
+  - neoteroi.projects
+
+extra_css:
+  - css/neoteroi-mkdocs.css
+
+# Theme
+theme:
+  name: material
+  language: en
+  logo: images/doberman.png
+  favicon: images/logo_fam.png
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: black
+    accent: amber
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: black
+    accent: amber
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fralfaro
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/fralfaro
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/faam/
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/faamds
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@fralfaro
+    - icon: fontawesome/solid/globe
+      link: https://fralfaro.github.io/portfolio/
+
+# Plugins
+plugins:
+  - mkdocs-jupyter:
+      kernel_name: python3
+  - search
+
+ #TOC
+nav:
+    - Home: index.md
+    - 2022:
+        - Causal Impact: blog/posts/2022/2022-10-12-causal_impact.ipynb
+        - Collaborative Filtering: blog/posts/2022/2022-10-12-implicit.ipynb
+        - blog/posts/2022/2021-07-15-tdd.ipynb
+        - blog/posts/2022/2022-03-16-polars.ipynb
+    - 2021:
+        - blog/posts/2021/basic-analysis-impact-on-digital-learning.ipynb
+        - blog/posts/2021/2021-08-20-fastpages.ipynb
+        - blog/posts/2021/2021-08-31-buenas_practicas.ipynb
+        - blog/posts/2021/2021-08-11-jb.ipynb
+        - blog/posts/2021/2021-08-05-rise.ipynb
+        - blog/posts/2021/2021-07-31-jupyter.ipynb
+
+
+
+
+
