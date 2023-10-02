@@ -8,7 +8,7 @@
 :octicons-clock-24: 5 min read
 
 [<img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png"  width="80"  align="left">](posts/2022/2022-10-12-causal_impact.ipynb)
-Cómo utilizar GitLab CI/CD en la generación de archivos PDF mediante artefactos resultantes de un Pipeline . <br>
+Cómo aprovechar GitLab CI/CD para generar archivos PDF utilizando los artefactos de un Pipeline. <br>
 [Continue reading ➔](./blog/posts/2023/gitlab_pdf.md)
 
 
