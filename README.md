@@ -13,7 +13,7 @@ A collection of articles covering topics about programming and education (in spa
 
 #### Causal Impact
 
-:fox_face: Gitlab  📅 Oct 01, 2023 🕒  10 min read
+:octocat: Gitlab  📅 Oct 01, 2023 🕒  10 min read
 
 [<img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png"  width="80"  align="left">](posts/2023/gitlab_pdf.md)
 Cómo aprovechar GitLab CI/CD para generar archivos PDF utilizando los artefactos de un Pipeline. <br>
