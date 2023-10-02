@@ -741,7 +741,7 @@ convierte en una opción atractiva para equipos de desarrollo.</p>
 es importante comprender el concepto de "artefactos" 
 en GitLab CI/CD. Los artefactos son archivos o conjuntos
 de archivos generados como resultado de una ejecución exitosa 
-de un pipeline de CI/CD.</p>
+de un pipeline.</p>
 <p>Estos artefactos se almacenan en GitLab y se pueden
 utilizar posteriormente en otros trabajos o pipelines. </p>
 <p>En el contexto de la generación de archivos PDF, 
@@ -776,7 +776,7 @@ formatearlos en un archivo PDF.</p>
 <h3 id="paso-3-configuracion-de-gitlab-cicd">Paso 3: Configuración de GitLab CI/CD</h3>
 <p>En su repositorio de GitLab, cree un archivo llamado 
 <code>.gitlab-ci.yml</code> si aún no lo ha hecho.</p>
-<p>Este archivo contiene la configuración de su pipeline de CI/CD. </p>
+<p>Este archivo contiene la configuración de su pipeline. </p>
 <p>Aquí hay un ejemplo de cómo podría verse:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">stages</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span>
@@ -796,7 +796,7 @@ formatearlos en un archivo PDF.</p>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span>
 </code></pre></div>
 <ol>
-<li><code>stages</code>: Esta sección define las etapas (stages) en la tubería de CI/CD. En este caso, solo se define una etapa llamada "pdf". Las etapas son divisiones lógicas en la tubería que agrupan trabajos relacionados. En este caso, la tubería tiene una sola etapa llamada "pdf".</li>
+<li><code>stages</code>: Esta sección define las etapas (stages). En este caso, solo se define una etapa llamada "pdf". Las etapas son divisiones lógicas en el pipeline que agrupan trabajos relacionados. En este caso, el pipeline tiene una sola etapa llamada "pdf".</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">generate_pdf</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span>
@@ -806,10 +806,10 @@ formatearlos en un archivo PDF.</p>
 </code></pre></div>
 <ol>
 <li>
-<p><code>generate_pdf</code>: Esta sección define un trabajo (job) llamado "generate_pdf". Un trabajo es una unidad de ejecución en la tubería de CI/CD. Aquí está el desglose de esta sección:</p>
+<p><code>generate_pdf</code>: Esta sección define un trabajo (job) llamado "generate_pdf". Un trabajo es una unidad de ejecución en el pipeline. Aquí está el desglose de esta sección:</p>
 </li>
 <li>
-<p><code>stage: pdf</code>: Esta línea especifica que este trabajo pertenece a la etapa "pdf" definida previamente. En otras palabras, este trabajo se ejecutará en la etapa "pdf" de la tubería.</p>
+<p><code>stage: pdf</code>: Esta línea especifica que este trabajo pertenece a la etapa "pdf" definida previamente. En otras palabras, este trabajo se ejecutará en la etapa "pdf" del pipeline.</p>
 </li>
 <li>
 <p><code>image: aergus/latex</code>: Esta línea especifica la imagen Docker que se utilizará para ejecutar este trabajo. En este caso, se utiliza la imagen "aergus/latex", que contiene un entorno LaTeX para compilar documentos PDF. Esta imagen es esencial para compilar archivos LaTeX en archivos PDF.</p>
@@ -827,16 +827,16 @@ formatearlos en un archivo PDF.</p>
 <p><code>artifacts</code>: Esta sección especifica qué archivos deben considerarse artefactos y, por lo tanto, se conservarán después de una ejecución exitosa del trabajo. Aquí está el desglose de esta sección:</p>
 </li>
 <li>
-<p><code>paths: ./*.pdf</code>: Esta línea especifica que todos los archivos con extensión ".pdf" en el directorio actual deben considerarse artefactos. Esto significa que los archivos PDF generados como resultado de la ejecución de este trabajo se conservarán y estarán disponibles para su descarga después de que la tubería se haya ejecutado con éxito.</p>
+<p><code>paths: ./*.pdf</code>: Esta línea especifica que todos los archivos con extensión ".pdf" en el directorio actual deben considerarse artefactos. Esto significa que los archivos PDF generados como resultado de la ejecución de este trabajo se conservarán y estarán disponibles para su descarga después de el pipeline se haya ejecutado con éxito.</p>
 </li>
 </ol>
 <h3 id="paso-4-ejecucion-del-pipeline">Paso 4: Ejecución del pipeline</h3>
-<p>Cada vez que realice un envío de código (push) o active manualmente el pipeline de CI/CD, 
+<p>Cada vez que realice un envío de código (push) o active manualmente el pipeline, 
 GitLab ejecutará el trabajo de generación de PDF. 
 El script generará el archivo PDF y lo almacenará como un artefacto.</p>
 <p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_03.png" alt="" align="center"/></p>
 <h3 id="paso-5-acceso-a-los-archivos-pdf-generados">Paso 5: Acceso a los Archivos PDF Generados</h3>
-<p>Una vez que el pipeline de CI/CD se haya ejecutado con éxito, 
+<p>Una vez que el pipeline se haya ejecutado con éxito, 
 puede acceder a los archivos PDF generados en GitLab.</p>
 <p>Vaya a la página de su proyecto en GitLab, seleccione "CI/CD" y 
 luego "Artefactos". </p>
