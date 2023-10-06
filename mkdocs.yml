@@ -43,7 +43,7 @@ theme:
   name: material
   language: en
   logo: images/doberman.png
-  favicon: images/logo_fam.png
+  favicon: images/doberman.png
   palette:
   - media: "(prefers-color-scheme: light)"
     scheme: default
