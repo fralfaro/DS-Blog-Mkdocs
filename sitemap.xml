@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/fralfaro/DS-Blog/blog/posts/2023/art_docs/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/fralfaro/DS-Blog/blog/posts/2023/gitlab_pdf/</loc>
          <lastmod>2023-10-06</lastmod>
          <changefreq>daily</changefreq>

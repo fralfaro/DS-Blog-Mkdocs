@@ -1,0 +1,1534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Francisco Alfaro">
+      
+      
+        <link rel="canonical" href="https://github.com/fralfaro/DS-Blog/blog/posts/2023/art_docs/">
+      
+      <link rel="icon" href="../../../../images/logo_fam.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Documentación - Data Science Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-arte-de-una-buena-documentacion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Data Science Blog" class="md-header__button md-logo" aria-label="Data Science Blog" data-md-component="logo">
+      
+  <img src="../../../../images/doberman.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Science Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fralfaro/DS-Blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fralfaro/DS-Blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Data Science Blog" class="md-nav__button md-logo" aria-label="Data Science Blog" data-md-component="logo">
+      
+  <img src="../../../../images/doberman.png" alt="logo">
+
+    </a>
+    Data Science Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fralfaro/DS-Blog" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fralfaro/DS-Blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          2023
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2023" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          2023
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Documentación
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Documentación
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-vs-documentacion" class="md-nav__link">
+    Comentarios vs Documentación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-hinting-en-python" class="md-nav__link">
+    Type Hinting en Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introudccion" class="md-nav__link">
+    Introudcción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-docstrings" class="md-nav__link">
+    Tipos de Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-las-docstrings" class="md-nav__link">
+    Formato de las Docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings-de-clase" class="md-nav__link">
+    Docstrings de Clase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estilos-de-docstrings" class="md-nav__link">
+    Estilos de Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Estilos de Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-docstrings" class="md-nav__link">
+    Google docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restructuredtext" class="md-nav__link">
+    reStructuredText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpyscipy-docstrings" class="md-nav__link">
+    NumPy/SciPy docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epytext" class="md-nav__link">
+    Epytext
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentar-tus-proyectos-de-python" class="md-nav__link">
+    Documentar tus Proyectos de Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principales-librerias" class="md-nav__link">
+    Principales librerías
+  </a>
+  
+    <nav class="md-nav" aria-label="Principales librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    Sphinx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    MkDocs
+  </a>
+  
+    <nav class="md-nav" aria-label="MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-material" class="md-nav__link">
+    MkDocs-Material
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-donde-empiezo" class="md-nav__link">
+    ¿Por Dónde Empiezo?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab_pdf/" class="md-nav__link">
+        Gitlab PDF
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          2022
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2022" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2022
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/2022-10-12-causal_impact/" class="md-nav__link">
+        Causal Impact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/2022-10-12-implicit/" class="md-nav__link">
+        Collaborative Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/2021-07-15-tdd/" class="md-nav__link">
+        TDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022/2022-03-16-polars/" class="md-nav__link">
+        Polars
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          2021
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2021" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/basic-analysis-impact-on-digital-learning/" class="md-nav__link">
+        Impact on Digital Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/2021-08-20-fastpages/" class="md-nav__link">
+        Fastpages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/2021-08-31-buenas_practicas/" class="md-nav__link">
+        Buenas Prácticas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/2021-08-11-jb/" class="md-nav__link">
+        Jupyter Book
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/2021-08-05-rise/" class="md-nav__link">
+        RISE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021/2021-07-31-jupyter/" class="md-nav__link">
+        Jupyter Noteboook
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-vs-documentacion" class="md-nav__link">
+    Comentarios vs Documentación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    Comentarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-hinting-en-python" class="md-nav__link">
+    Type Hinting en Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docstrings" class="md-nav__link">
+    Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introudccion" class="md-nav__link">
+    Introudcción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-docstrings" class="md-nav__link">
+    Tipos de Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-las-docstrings" class="md-nav__link">
+    Formato de las Docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings-de-clase" class="md-nav__link">
+    Docstrings de Clase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estilos-de-docstrings" class="md-nav__link">
+    Estilos de Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Estilos de Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-docstrings" class="md-nav__link">
+    Google docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restructuredtext" class="md-nav__link">
+    reStructuredText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpyscipy-docstrings" class="md-nav__link">
+    NumPy/SciPy docstrings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epytext" class="md-nav__link">
+    Epytext
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentar-tus-proyectos-de-python" class="md-nav__link">
+    Documentar tus Proyectos de Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principales-librerias" class="md-nav__link">
+    Principales librerías
+  </a>
+  
+    <nav class="md-nav" aria-label="Principales librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    Sphinx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    MkDocs
+  </a>
+  
+    <nav class="md-nav" aria-label="MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-material" class="md-nav__link">
+    MkDocs-Material
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-donde-empiezo" class="md-nav__link">
+    ¿Por Dónde Empiezo?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="el-arte-de-una-buena-documentacion">El arte de una buena documentación</h1>
+<p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/books.png" width="150" align="center" /></p>
+<p>Esperamos que, si estás leyendo este tutorial, ya comprendas
+la importancia de documentar tu código. Pero, por
+si acaso, permíteme citar algo que Guido mencionó 
+en la reciente <a href="https://www.youtube.com/watch?v=YgtL4S7Hrwo&amp;ab_channel=PyCon2016">PyCon 2016</a>:</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"El código se lee más a menudo de lo que se escribe."
+— <em><a href="https://gvanrossum.github.io/">Guido van Rossum</a></em></p>
+</div>
+<p>Cuando escribes código, lo haces para dos audiencias principales: tus usuarios
+y tus desarrolladores (incluyéndote a ti mismo). Ambas audiencias son
+igualmente cruciales. Si eres como yo, es posible que hayas abierto
+antiguas bases de código y te hayas preguntado: "¿En qué estaba pensando?". 
+Si tienes dificultades para entender tu propio código, imagina lo que tus 
+usuarios u otros desarrolladores sienten cuando intentan utilizarlo o <strong>contribuir</strong> a tu código.</p>
+<p>Por otro lado, es probable que hayas pasado por situaciones en las que deseabas realizar
+algo en Python y encontraste lo que parecía ser una excelente biblioteca que podría hacer 
+el trabajo. Sin embargo, al comenzar a usar la biblioteca, buscaste ejemplos, descripciones
+o incluso documentación oficial sobre cómo realizar una tarea específica y no pudiste encontrar una solución de inmediato.</p>
+<p>Después de buscar durante un tiempo, te das cuenta de que la documentación es insuficiente o,
+peor aún, está completamente ausente. Esta es una experiencia frustrante que te impide utilizar 
+la biblioteca, sin importar cuán bueno o eficiente sea el código. Daniele Procida resumió esta situación de manera acertada:</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"No importa cuán bueno sea tu software, porque <strong>si la documentación no es lo suficientemente buena, la gente no lo usará.</strong>"
+— <em><a href="https://www.divio.com/en/blog/documentation/">Daniele Procida</a></em></p>
+</div>
+<p>En esta guía, aprenderás desde cero cómo documentar adecuadamente tu código 
+en Python, desde los scripts más pequeños hasta los proyectos más grandes de
+Python, para evitar que tus usuarios se sientan frustrados al usar o contribuir a tu proyecto.</p>
+<h2 id="comentarios-vs-documentacion">Comentarios vs Documentación</h2>
+<p><img src="https://i.stechies.com/userfiles/images/python-docstrings.webp" width="500" align="center" /></p>
+<p>Antes de sumergirnos en el arte de documentar tu código en Python, es crucial establecer una distinción fundamental: los comentarios y la documentación desempeñan roles distintos y están dirigidos a audiencias diferentes.</p>
+<p><strong>Comentarios</strong>:</p>
+<p>En términos generales, los comentarios están diseñados 
+para proporcionar información sobre tu código a los desarrolladores. </p>
+<p>La audiencia principal a la que se dirigen son aquellos que mantienen y 
+trabajan en el código Python. Cuando se combinan con un código bien escrito, 
+los comentarios actúan como guías que ayudan a los lectores a comprender mejor el código, 
+su propósito y su estructura. Esto se alinea perfectamente con la sabia observación de Jeff Atwood,</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"El código te dice cómo; los comentarios te dicen por qué."
+— <a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">Jeff Atwood</a></p>
+</div>
+<p><strong>Documentación del Código</strong>:</p>
+<p>Por otro lado, la documentación del código se enfoca en describir el uso y la funcionalidad 
+del código a los usuarios. Aunque puede ser útil durante el proceso de desarrollo, su audiencia 
+principal son los usuarios finales del software. La siguiente sección de este artículo se adentrará 
+en cuándo y cómo debes abordar la tarea de comentar tu código en Python.</p>
+<h2 id="comentarios">Comentarios</h2>
+<p><img src="https://www.stechies.com/userfiles/images/Comments-in-python.webp" width="500" align="center" /></p>
+<p>En Python, los comentarios son esenciales para 
+proporcionar información adicional sobre tu código. </p>
+<p>Se crean utilizando el símbolo de número (<code>#</code>) y deben 
+ser declaraciones breves, no más largas que unas pocas frases. Aquí tienes un ejemplo simple:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>    
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1"># Un comentario simple antes de una simple declaración de impresión</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola Mundo&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De acuerdo con las <a href="http://pep8.org/#maximum-line-length">pautas de estilo de código de Python (PEP 8)</a>, 
+los comentarios deben tener una longitud máxima de 72 caracteres.
+Esto es válido incluso si tu proyecto cambia la longitud máxima de línea recomendada para que sea mayor que los 80 caracteres. 
+Si un comentario va a superar el límite de caracteres recomendado, es apropiado usar múltiples líneas para el comentario:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">hello_long_world</span><span class="p">():</span>     
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="c1"># Una declaración muy larga que sigue y sigue y sigue y sigue y sigue </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="c1"># sin terminar hasta que alcance el límite de 80 caracteres</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Hola Mundoooooooooooooooooooooooooooooooooooooooooooooooooooooo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Comentar tu código sirve para varios propósitos, incluyendo:</p>
+<ul>
+<li>
+<p><strong>Planificación y Revisión:</strong> Durante el desarrollo de nuevas partes de tu código, los comentarios pueden servir como una forma de planificar o esquematizar esa sección. Es importante recordar eliminar estos comentarios una vez que se haya implementado y revisado/testeado el código real:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Primer paso</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Segundo paso</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Tercer paso</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Descripción del Código:</strong> Los comentarios se utilizan para explicar la intención de secciones específicas del código:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Intentar una conexión basada en configuraciones anteriores. Si no tiene éxito,</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># solicitar al usuario nuevas configuraciones.</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Descripción Algorítmica:</strong> Al usar algoritmos, especialmente los complicados, es útil explicar cómo funcionan o cómo se implementan en tu código. También es apropiado describir por qué seleccionaste un algoritmo específico en lugar de otro:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Usar el ordenamiento rápido para obtener ganancias de rendimiento.</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Etiquetado:</strong> Puedes utilizar etiquetas para señalar secciones específicas de código donde se encuentran problemas conocidos o áreas de mejora. Algunos ejemplos son <code>BUG</code>, <code>FIXME</code> y <code>TODO</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># TODO: Agregar condición para cuando &#39;val&#39; sea None</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Los comentarios en tu código deben ser breves y centrados. Evita comentarios largos cuando sea posible. Además, sigue las siguientes cuatro reglas esenciales sugeridas por Jeff Atwood:</p>
+<ol>
+<li>
+<p><strong>Mantén los Comentarios Cerca del Código:</strong> Los comentarios deben estar lo más cerca posible del código que describen. Los comentarios distantes del código descriptivo son frustrantes y pueden pasarse por alto fácilmente al realizar actualizaciones.</p>
+</li>
+<li>
+<p><strong>Evita el Formato Complejo:</strong> No uses formatos complejos como tablas o figuras ASCII. Estos formatos pueden distraer y ser difíciles de mantener con el tiempo.</p>
+</li>
+<li>
+<p><strong>Evita Información Redundante:</strong> Supón que el lector del código tiene un entendimiento básico de los principios de programación y la sintaxis del lenguaje. No incluyas información redundante.</p>
+</li>
+<li>
+<p><strong>Diseña Tu Código para que se Comente por Sí Mismo:</strong> La forma más fácil de entender el código es leyéndolo. Cuando diseñes tu código utilizando conceptos claros y fáciles de entender, ayudarás al lector a comprender tu intención de manera rápida y sencilla.</p>
+</li>
+</ol>
+<p>Recuerda que los comentarios están diseñados para los lectores, incluyéndote a ti mismo,
+para ayudarlos a comprender el propósito y diseño del software.</p>
+<h3 id="type-hinting-en-python">Type Hinting en Python</h3>
+<p><img src="https://cdn-images-1.medium.com/v2/resize:fit:764/1*ki1NgX07eTLUWtafhqmiWQ.gif" width="400" align="center" /></p>
+<p>El <a href="https://docs.python.org/3/library/typing.html">Type Hinting</a> es una característica que te permite
+indicar explícitamente los tipos de datos que esperas 
+en las funciones y métodos. Aunque Python es un lenguaje de programación de tipado dinámico,
+el Type Hinting no cambia esa naturaleza, pero proporciona información adicional a los desarrolladores y a
+las herramientas de análisis estático sobre cómo debería funcionar el código.</p>
+<p>El Type Hinting no afecta el comportamiento en tiempo de ejecución,
+por lo que no impide que el código funcione si los tipos no coinciden.</p>
+<p>En cambio, es una herramienta para ayudar a los desarrolladores a comprender y depurar el
+código de manera más eficiente y prevenir posibles errores.</p>
+<p>Considera la siguiente función <code>hello_name</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">hello_name</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>En este ejemplo, hemos utilizado Type Hinting para especificar 
+que el parámetro <code>name</code> debe ser una cadena (<code>str</code>) y que la función 
+<code>hello_name</code> debe devolver una cadena (<code>str</code>). Esta información es
+útil para otros desarrolladores que utilicen esta función porque 
+ahora saben qué tipo de dato esperar como entrada y qué tipo de dato obtendrán
+como resultado.</p>
+<h2 id="docstrings">Docstrings</h2>
+<p><img src="https://t3h.edu.vn/sites/default/files/docstring-trong-python-01.png" width="500" align="center" /></p>
+<p>Una parte fundamental de
+la documentación en Python son las <strong>docstrings</strong>, que son cadenas de texto utilizadas 
+para describir funciones, clases, módulos y más.</p>
+<h3 id="introudccion">Introudcción</h3>
+<p>Las docstrings son cadenas de documentación 
+que se encuentran dentro del código fuente Python. 
+Estas cadenas proporcionan información sobre el propósito y el
+funcionamiento de funciones, clases y otros elementos del código.</p>
+<p>Las docstrings son especialmente valiosas para ayudar a los usuarios y desarrolladores
+a comprender cómo utilizar y trabajar con tu código.</p>
+<p><strong>¿Cómo Funcionan las Docstrings?</strong></p>
+<p>Cuando definimos una función, clase o módulo en Python, podemos incluir una docstring justo debajo de la definición. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Esta función imprime un saludo personalizado.&quot;&quot;&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Las docstrings se pueden acceder a través del atributo <code>__doc__</code> del objeto. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">saludar</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</code></pre></div>
+<p>La salida sería: "Esta función imprime un saludo personalizado." 
+Las docstrings también se utilizan en entornos de desarrollo 
+interactivo y se muestran al utilizar la función <code>help()</code>.</p>
+<p><strong>Manipulación de Docstrings</strong></p>
+<p>Es importante destacar que puedes manipular
+directamente las docstrings. Sin embargo, existen restricciones
+para los objetos incorporados en Python. Por ejemplo, no puedes cambiar la docstring de un objeto <code>str</code> incorporado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">str</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;¡Esto no funcionará para objetos incorporados!&quot;</span>
+</code></pre></div>
+<p>Pero para funciones y objetos personalizados,
+puedes establecer o modificar sus docstrings de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">decir_hola</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Una función simple que saluda a la manera de Richie.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hola </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">, ¿soy yo a quien estás buscando?&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">decir_hola</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;Una función que saluda estilo Richie Rich.&quot;</span>
+</code></pre></div>
+<p><strong>Ubicación Estratégica de las Docstrings</strong></p>
+<p>Una forma más sencilla de definir docstrings es colocar una cadena literal justo debajo de la definición de la función o clase. Python automáticamente interpreta esta cadena como la docstring. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">decir_hola</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Una función simple que saluda a la manera de Richie.&quot;&quot;&quot;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hola </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">, ¿soy yo a quien estás buscando?&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="tipos-de-docstrings">Tipos de Docstrings</h3>
+<p>Las docstrings son elementos esenciales para documentar 
+tu código Python de manera clara y coherente. Siguen convenciones y
+pautas que se describen en <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a>. </p>
+<p>El propósito de las docstrings es proporcionar a los usuarios de tu código un resumen conciso 
+y útil del objeto, como una función, clase, módulo o script. Deben ser lo suficientemente 
+concisas como para ser fáciles de mantener, pero lo suficientemente detalladas como para
+que los nuevos usuarios comprendan su propósito y cómo utilizar el objeto documentado.</p>
+<h4 id="formato-de-las-docstrings">Formato de las Docstrings</h4>
+<p>Todas las docstrings deben utilizar el formato de triple comilla doble (<code>"""</code>) y 
+deben colocarse justo debajo de la definición del objeto, ya sea en una sola línea o en varias líneas:</p>
+<p><strong>Una línea:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="sd">&quot;&quot;&quot;Esta es una línea de resumen rápida utilizada como descripción del objeto.&quot;&quot;&quot;</span>
+</code></pre></div>
+<p><strong>Varias líneas:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="sd">Esta es la línea de resumen</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="sd">Esta es la elaboración adicional de la docstring. Dentro de esta sección, puedes proporcionar más detalles según sea apropiado para la situación. Observa que el resumen y la elaboración están separados por una nueva línea en blanco.</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>Es importante destacar que todas las docstrings de varias líneas deben seguir un patrón específico:</p>
+<ol>
+<li>Una línea de resumen de una sola línea.</li>
+<li>Una línea en blanco después del resumen.</li>
+<li>Cualquier elaboración adicional de la docstring.</li>
+<li>Otra línea en blanco.</li>
+</ol>
+<p>Además, todas las docstrings deben tener una longitud máxima de caracteres que sigue las mismas pautas que los comentarios, que es de 72 caracteres.</p>
+<h4 id="docstrings-de-clase">Docstrings de Clase</h4>
+<p>Las docstrings de clase se crean para la clase en sí, así como para cualquier método de clase. Las docstrings se colocan inmediatamente después de la clase o el método de clase, con un nivel de sangría:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span> <span class="nc">ClaseSimple</span><span class="p">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Aquí van las docstrings de clase.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">def</span> <span class="nf">decir_hola</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Aquí van las docstrings de método de clase.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hola </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Las docstrings de clase deben contener la siguiente información:</p>
+<ul>
+<li>Un breve resumen de su propósito y comportamiento.</li>
+<li>Cualquier método público, junto con una breve descripción.</li>
+<li>Cualquier propiedad de clase (atributos).</li>
+<li>Cualquier cosa relacionada con la <a href="https://realpython.com/python-interface/">interfaz</a> para los subclases, si la clase está destinada a ser subclaseada.</li>
+</ul>
+<p>Los parámetros del <a href="https://realpython.com/python-class-constructor/">constructor de clase</a> deben documentarse dentro de la docstring del método <code>__init__</code> de la clase. Los métodos individuales deben documentarse utilizando sus propias docstrings individuales. Las docstrings de método de clase deben contener lo siguiente:</p>
+<ul>
+<li>Una breve descripción de lo que hace el método y para qué se utiliza.</li>
+<li>Cualquier argumento (tanto requerido como opcional) que se pase, incluidos los argumentos de palabras clave.</li>
+<li>Etiqueta para cualquier argumento que se considere opcional o tenga un valor predeterminado.</li>
+<li>Cualquier efecto secundario que ocurra al ejecutar el método.</li>
+<li>Cualquier excepción que se genere.</li>
+<li>Cualquier restricción sobre cuándo se puede llamar al método.</li>
+</ul>
+<p>Echemos un vistazo a un ejemplo simple de una clase 
+de datos que representa un Animal. Esta clase contendrá algunas propiedades de clase, propiedades de instancia, un <code>__init__</code> y un único <a href="https://realpython.com/instance-class-and-static-methods-demystified/">método de instancia</a>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Una clase utilizada para representar un Animal</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="sd">    Attributes:</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="sd">        dice_str (str): una cadena formateada para imprimir lo que dice el animal</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="sd">        nombre (str): el nombre del animal</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="sd">        sonido (str): el sonido que hace el animal</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="sd">        num_patas (int): el número de patas del animal (predeterminado 4)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>    <span class="n">dice_str</span> <span class="o">=</span> <span class="s2">&quot;Un </span><span class="si">{nombre}</span><span class="s2"> dice </span><span class="si">{sonido}</span><span class="s2">&quot;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">sonido</span><span class="p">,</span> <span class="n">num_patas</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Inicializa una nueva instancia de Animal</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="sd">        Parameters:</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="sd">            nombre (str): El nombre del animal</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="sd">            sonido (str): El sonido que hace el animal</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="sd">            num_patas (int, opcional): El número de patas del animal (predeterminado es 4)</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sonido</span> <span class="o">=</span> <span class="n">sonido</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">num_patas</span> <span class="o">=</span> <span class="n">num_patas</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    <span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sonido</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Imprime el nombre del animal y el sonido que hace.</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="sd">        Si no se pasa el argumento `sonido`, se utiliza el sonido predeterminado del Animal.</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a><span class="sd">        Parameters:</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="sd">            sonido (str, opcional): El sonido que hace el animal (predeterminado es None)</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a><span class="sd">        Raises:</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a><span class="sd">            NotImplementedError: Si no se establece ningún sonido para el animal o se pasa como parámetro.</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sonido</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">sonido</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;¡No se admiten animales silenciosos!&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>        <span class="n">sonido_salida</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sonido</span> <span class="k">if</span> <span class="n">sonido</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">sonido</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dice_str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span> <span class="n">sonido</span><span class="o">=</span><span class="n">sonido_salida</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="estilos-de-docstrings">Estilos de Docstrings</h3>
+<p><img src="https://cdn-icons-png.flaticon.com/512/2620/2620243.png" width="150" align="center" /></p>
+<p>Existen formatos específicos de docstrings que pueden 
+ ser utilizados para ayudar a los analizadores de docstrings y 
+ a los usuarios a tener un formato familiar y reconocido.</p>
+<p>Algunos de los formatos más comunes son los siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de Formato</th>
+<th>Descripción</th>
+<th style="text-align: center;">Compatible con Sphinx</th>
+<th style="text-align: center;">Especificación Formal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings">Google docstrings</a></td>
+<td>Forma de documentación recomendada por Google</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td><a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a></td>
+<td>Estándar oficial de documentación de Python; no es amigable para principiantes pero rico en características</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+<tr>
+<td><a href="https://numpydoc.readthedocs.io/en/latest/format.html">NumPy/SciPy docstrings</a></td>
+<td>Combinación de reStructuredText y Docstrings de Google utilizada por NumPy</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+<tr>
+<td><a href="http://epydoc.sourceforge.net/epytext.html">Epytext</a></td>
+<td>Una adaptación de Epydoc para Python; ideal para desarrolladores de Java</td>
+<td style="text-align: center;">No oficialmente</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+</tbody>
+</table>
+<p>La elección del formato de docstring depende de ti, pero debes mantener el mismo formato en todo tu documento o proyecto. A continuación, se presentan ejemplos de cada tipo para darte una idea de cómo se ve cada formato de documentación.</p>
+<h4 id="google-docstrings">Google docstrings</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="sd">&quot;&quot;&quot;Obtiene e imprime las columnas de encabezado de la hoja de cálculo</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="sd">Args:</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="sd">    file_loc (str): La ubicación del archivo de la hoja de cálculo.</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="sd">    print_cols (bool): Una bandera utilizada para imprimir las columnas en la consola</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="sd">        (el valor predeterminado es Falso)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="sd">Returns:</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="sd">    list: una lista de cadenas que representan las columnas de encabezado</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="restructuredtext">reStructuredText</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="sd">&quot;&quot;&quot;Obtiene e imprime las columnas de encabezado de la hoja de cálculo</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="sd">:param file_loc: La ubicación del archivo de la hoja de cálculo</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="sd">:type file_loc: str</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="sd">:param print_cols: Una bandera utilizada para imprimir las columnas en la consola</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="sd">    (el valor predeterminado es Falso)</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="sd">:type print_cols: bool</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="sd">:returns: una lista de cadenas que representan las columnas de encabezado</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="sd">:rtype: list</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="numpyscipy-docstrings">NumPy/SciPy docstrings</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="sd">&quot;&quot;&quot;Obtiene e imprime las columnas de encabezado de la hoja de cálculo</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="sd">Parameters</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="sd">----------</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="sd">file_loc : str</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="sd">    La ubicación del archivo de la hoja de cálculo</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="sd">print_cols : bool, opcional</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="sd">    Una bandera utilizada para imprimir las columnas en la consola (el valor predeterminado es Falso)</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="sd">Returns</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="sd">-------</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="sd">list</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="sd">    una lista de cadenas que representan las columnas de encabezado</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="epytext">Epytext</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="sd">&quot;&quot;&quot;Obtiene e imprime las columnas de encabezado de la hoja de cálculo</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="sd">@type file_loc: str</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="sd">@param file_loc: La ubicación del archivo de la hoja de cálculo</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="sd">@type print_cols: bool</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="sd">@param print_cols: Una bandera utilizada para imprimir las columnas en la consola</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="sd">    (el valor predeterminado es Falso)</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="sd">@rtype: list</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="sd">@returns: una lista de cadenas que representan las columnas de encabezado</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>Estos ejemplos te proporcionan una idea de cómo se estructuran y formatean las docstrings 
+en diferentes estilos de documentación. </p>
+<p>Puedes elegir el que mejor se adapte a tus preferencias 
+y necesidades de documentación, pero asegúrate de mantener la coherencia en todo tu proyecto.</p>
+<h2 id="documentar-tus-proyectos-de-python">Documentar tus Proyectos de Python</h2>
+<p>Los proyectos de Python vienen en todo tipo de formas,
+tamaños y propósitos. La forma en que documentas tu proyecto
+debe adaptarse a tu situación específica. Ten en cuenta quiénes serán 
+los usuarios de tu proyecto y adáptate a sus necesidades. Dependiendo 
+del tipo de proyecto, se recomiendan ciertos aspectos de la documentación. La estructura general del proyecto y su documentación debe ser la siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>project_root/
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>│
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>├── project/  # Project source code
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>├── docs/
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>├── README
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>├── HOW_TO_CONTRIBUTE
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>├── CODE_OF_CONDUCT
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>├── examples.py
+</code></pre></div>
+<p>Esta estructura de directorios es un diseño común para organizar un proyecto de software en Python. A continuación, se explica en detalle cada elemento de esta estructura:</p>
+<ol>
+<li>
+<p><strong>project_root (Directorio Raíz del Proyecto):</strong>
+   Este es el directorio principal que contiene todos los archivos y carpetas relacionados con tu proyecto. Es el punto de partida para tu proyecto.</p>
+</li>
+<li>
+<p><strong>project/ (Carpeta "project"):</strong>
+   Esta carpeta suele contener el código fuente principal de tu proyecto. Aquí se almacenan todos los archivos de Python que forman parte de tu proyecto. Puedes organizar estos archivos en subdirectorios según la estructura de tu proyecto. Por ejemplo, puedes tener subdirectorios para módulos específicos o componentes del proyecto.</p>
+</li>
+<li>
+<p><strong>docs/ (Carpeta "docs"):</strong>
+   La carpeta "docs" se utiliza para almacenar la documentación de tu proyecto. Aquí puedes incluir documentos explicativos, manuales de usuario, instrucciones de instalación y cualquier otra documentación relevante. Mantener una documentación clara y organizada es esencial para que los usuarios comprendan y utilicen tu proyecto de manera efectiva.</p>
+</li>
+<li>
+<p><strong>README:</strong>
+   El archivo "README" es un documento importante que proporciona una breve descripción de tu proyecto y su propósito. Suele incluir información sobre cómo instalar y utilizar el proyecto, así como otros detalles importantes. Los usuarios suelen consultar este archivo primero cuando exploran un proyecto.</p>
+</li>
+<li>
+<p><strong>HOW_TO_CONTRIBUTE:</strong>
+   Este archivo contiene instrucciones para las personas que deseen contribuir al desarrollo de tu proyecto. Incluye detalles sobre cómo pueden colaborar, enviar correcciones, agregar nuevas funciones y seguir las pautas de contribución.</p>
+</li>
+<li>
+<p><strong>CODE_OF_CONDUCT:</strong>
+   El archivo "CODE_OF_CONDUCT" establece las reglas y pautas de comportamiento que deben seguir los colaboradores y usuarios del proyecto. Define cómo deben interactuar entre sí de manera respetuosa y profesional. También puede indicar las consecuencias en caso de violación del código de conducta.</p>
+</li>
+<li>
+<p><strong>examples.py:</strong>
+   Este archivo es un script de Python que contiene ejemplos simples de cómo utilizar las funcionalidades de tu proyecto. Estos ejemplos pueden ayudar a los usuarios a comprender cómo utilizar tu código en situaciones reales y proporcionar ejemplos de uso práctico.</p>
+</li>
+</ol>
+<h2 id="principales-librerias">Principales librerías</h2>
+<p>La documentación es una parte fundamental de cualquier proyecto de desarrollo de software.
+Proporciona información crucial sobre cómo utilizar, mantener y contribuir al código. 
+En el ecosistema de Python, existen varias bibliotecas y herramientas que facilitan la 
+tarea de documentar el código de manera efectiva. En este artículo, exploraremos algunas de
+las principales bibliotecas de Python utilizadas para documentar código.</p>
+<h3 id="sphinx">Sphinx</h3>
+<p><img src="https://quintagroup.com/cms/python/images/sphinx-logo.png/sphinx-logo.png" width="400" align="center" /></p>
+<p><a href="https://www.sphinx-doc.org/">Sphinx</a> es una de las herramientas de documentación más populares en el mundo de Python. Fue originalmente desarrollada para documentar la propia documentación de Python y se ha convertido en una elección común para proyectos de código abierto y proyectos internos. Algunas de sus características clave incluyen:</p>
+<ul>
+<li>Generación de documentación en varios formatos, incluyendo HTML, PDF, ePub y más.</li>
+<li>Utiliza <a href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> como su formato de marcado predeterminado, que es altamente estructurado y permite documentar de manera eficiente los aspectos técnicos.</li>
+<li>Amplia gama de extensiones y complementos que permiten personalizar y mejorar la documentación.</li>
+<li>Admite la generación automática de documentación a partir de docstrings en el código Python.</li>
+<li>Es especialmente adecuado para documentar bibliotecas, API y proyectos técnicos.</li>
+</ul>
+<p>Sphinx es altamente configurable y puede generar documentación de alta calidad y profesional. Sin embargo, puede requerir un tiempo de configuración inicial y tiene una curva de aprendizaje empinada para los principiantes.</p>
+<h3 id="mkdocs">MkDocs</h3>
+<p><img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_778a7d232b5f8a1b643eae6a2a19150f/mkdocs.png" width="300" align="center" /></p>
+<p><a href="https://www.mkdocs.org/">MkDocs</a> es una herramienta de generación de documentación que se centra en la simplicidad y la facilidad de uso. Está diseñada para crear documentación de proyectos de una manera simple y rápida, principalmente enfocada en la generación de sitios web de documentación. Algunas de sus características clave incluyen:</p>
+<ul>
+<li>Utiliza <a href="https://www.markdownguide.org/getting-started/">Markdown</a> como formato de marcado predeterminado, que es fácil de aprender y escribir.</li>
+<li>Ofrece una interfaz de línea de comandos simple para iniciar y generar sitios de documentación.</li>
+<li>Proporciona temas y extensiones para personalizar el aspecto y la funcionalidad de la documentación generada.</li>
+<li>Ideal para proyectos de código abierto y documentación de proyectos pequeños a medianos.</li>
+</ul>
+<p>MkDocs es especialmente adecuado para proyectos con necesidades de documentación simples. Es fácil de aprender y usar, lo que lo convierte en una excelente opción para principiantes. Sin embargo, puede ser limitado en funcionalidad en comparación con Sphinx para proyectos técnicos y complejos.</p>
+<h4 id="mkdocs-material">MkDocs-Material</h4>
+<p><img src="https://embeddedcomputing.weebly.com/uploads/1/1/6/2/11624344/mkdocsmaterial_orig.png" width="300" align="center" /></p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/">MkDocs-Material</a> es un tema personalizado para MkDocs, una popular herramienta de generación de sitios web estáticos diseñada para crear documentación de proyectos de manera sencilla y efectiva. Este tema, conocido como "Material for MkDocs", se inspira en el elegante diseño de Material Design de Google y está diseñado para ofrecer una experiencia de documentación moderna y atractiva.</p>
+<p>Una de las principales características de MkDocs-Material es su enfoque en la legibilidad y la facilidad de navegación. Esto se logra mediante un diseño limpio y organizado que hace que la documentación sea más accesible para los usuarios. Además, el tema proporciona herramientas útiles para mejorar la experiencia de los lectores, como una función de búsqueda integrada que permite a los usuarios encontrar rápidamente la información que necesitan.</p>
+<p>Otra ventaja de MkDocs-Material es su navegación intuitiva, que facilita a los usuarios la exploración de la documentación y la navegación entre secciones y páginas. Esto es fundamental para garantizar que los usuarios puedan acceder fácilmente a la información que están buscando sin esfuerzo.</p>
+<h2 id="por-donde-empiezo">¿Por Dónde Empiezo?</h2>
+<p>La documentación de proyectos sigue una progresión simple:</p>
+<ol>
+<li>Sin Documentación</li>
+<li>Alguna Documentación</li>
+<li>Documentación Completa</li>
+<li>Buena Documentación</li>
+<li>Excelente Documentación</li>
+</ol>
+<p>Si te sientes perdido acerca de por dónde continuar con tu documentación, observa en qué punto se encuentra tu proyecto en relación con la progresión mencionada anteriormente. ¿Tienes alguna documentación? Si no la tienes, comienza por ahí. Si ya tienes algo de documentación pero te faltan algunos de los archivos clave del proyecto, comienza agregándolos.</p>
+<p>Al final, no te desanimes ni te sientas abrumado por la cantidad de trabajo necesario para documentar el código. </p>
+<p>Una vez que comiences a documentar tu código, te resultará más fácil seguir adelante. </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../gitlab_pdf/" class="md-footer__link md-footer__link--next" aria-label="Next: Gitlab PDF" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Gitlab PDF
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/fralfaro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://gitlab.com/fralfaro" target="_blank" rel="noopener" title="gitlab.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/faam/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.kaggle.com/faamds" target="_blank" rel="noopener" title="www.kaggle.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M304.2 501.5 158.4 320.3 298.2 185c2.6-2.7 1.7-10.5-5.3-10.5h-69.2c-3.5 0-7 1.8-10.5 5.3L80.9 313.5V7.5q0-7.5-7.5-7.5H21.5Q14 0 14 7.5v497q0 7.5 7.5 7.5h51.9q7.5 0 7.5-7.5v-109l30.8-29.3 110.5 140.6c3 3.5 6.5 5.3 10.5 5.3h66.9q5.25 0 6-3z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@fralfaro" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://fralfaro.github.io/portfolio/" target="_blank" rel="noopener" title="fralfaro.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 21 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
