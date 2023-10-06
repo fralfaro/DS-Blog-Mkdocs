@@ -86,6 +86,7 @@ plugins:
 nav:
     - Home: index.md
     - 2023:
+        - Documentación: blog/posts/2023/art_docs.md
         - Gitlab PDF: blog/posts/2023/gitlab_pdf.md
     - 2022:
         - Causal Impact: blog/posts/2022/2022-10-12-causal_impact.ipynb

@@ -11,7 +11,16 @@ A collection of articles covering topics about programming and education (in spa
 
 ## 2023
 
-#### Causal Impact
+#### Documentación
+
+🐍 Python  📅 Oct 07, 2023 🕒  10 min read
+
+[<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/books.png"  width="90"  align="left">](posts/2022/2022-10-12-causal_impact.ipynb)
+Enteneder los pasos para crear una buena documentación en Python (más algunas recomendaciones). <br>
+[Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2023/art_docs/) 
+<br><br><br>
+
+#### Gitlab PDF
 
 :fox_face: Gitlab  📅 Oct 01, 2023 🕒  10 min read
 
