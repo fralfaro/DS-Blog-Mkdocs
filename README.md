@@ -18,7 +18,7 @@ A collection of articles covering topics about programming and education (in spa
 [<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/share.png"  width="90"  align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2023/data_sharing.md)
 Cómo Compartir Datos de Manera Efectiva (desde el punto de vista estadístico) y no morir en el intento. <br>
 [Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2023/data_sharing.md)
-<br><br><br>
+<br><br>
 
 #### Documentación
 
