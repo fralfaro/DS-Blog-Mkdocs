@@ -2,6 +2,16 @@
 
 ## 2023
 
+### Compartir datos
+
+:fontawesome-brands-python: Python
+:octicons-calendar-24: Oct 26, 2023
+:octicons-clock-24: 10 min read
+
+[<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/share.png"  width="90"  align="left">](./blog/posts/2023/data_sharing.md)
+Cómo Compartir Datos de Manera Efectiva (desde el punto de vista estadístico) y no morir en el intento. <br>
+[Continue reading ➔](./blog/posts/2023/data_sharing.md)
+
 ### Documentación
 
 :fontawesome-brands-python: Python

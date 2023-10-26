@@ -11,11 +11,20 @@ A collection of articles covering topics about programming and education (in spa
 
 ## 2023
 
+#### Compartir datos
+
+🐍 Python  📅 Oct 26, 2023 🕒  10 min read
+
+[<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/share.png"  width="90"  align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2023/data_sharing.md)
+Cómo Compartir Datos de Manera Efectiva (desde el punto de vista estadístico) y no morir en el intento. <br>
+[Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2023/data_sharing.md)
+<br><br><br>
+
 #### Documentación
 
 🐍 Python  📅 Oct 07, 2023 🕒  10 min read
 
-[<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/books.png"  width="90"  align="left">](posts/2022/2022-10-12-causal_impact.ipynb)
+[<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/books.png"  width="90"  align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2023/art_docs/)
 Enteneder los pasos para crear una buena documentación en Python (más algunas recomendaciones). <br>
 [Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2023/art_docs/) 
 <br><br><br>
@@ -24,7 +33,7 @@ Enteneder los pasos para crear una buena documentación en Python (más algunas 
 
 :fox_face: Gitlab  📅 Oct 01, 2023 🕒  10 min read
 
-[<img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png"  width="80"  align="left">](posts/2023/gitlab_pdf.md)
+[<img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png"  width="80"  align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2023/gitlab_pdf/)
 Cómo aprovechar GitLab CI/CD para generar archivos PDF utilizando los artefactos de un Pipeline. <br>
 [Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2023/gitlab_pdf/) 
 <br><br><br>

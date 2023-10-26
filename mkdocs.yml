@@ -86,6 +86,7 @@ plugins:
 nav:
     - Home: index.md
     - 2023:
+        - Data-Sharing: blog/posts/2023/data_sharing.md
         - Documentación: blog/posts/2023/art_docs.md
         - Gitlab PDF: blog/posts/2023/gitlab_pdf.md
     - 2022:
