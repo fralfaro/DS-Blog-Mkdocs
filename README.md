@@ -53,7 +53,7 @@ Cómo aprovechar GitLab CI/CD para generar archivos PDF utilizando los artefacto
 
 🐍 Python  📅 Oct 12, 2022 🕒  10 min read
 
-[<img src="https://icons-for-free.com/iconfiles/ico/256/color+cinema+icons+Documentary-1320567852829864650.ico"  width="90" height="90" align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2022/2022-10-12-implicit)
+[<img src="https://cdn-icons-png.flaticon.com/512/2133/2133009.png"  width="90" height="90" align="left">](https://fralfaro.github.io/DS-Blog/blog/posts/2022/2022-10-12-implicit)
 *User-based collaborative filtering* para realizar un mejor sistema de recomendación de películas. <br>
 [Continue reading ➔](https://fralfaro.github.io/DS-Blog/blog/posts/2022/2022-10-12-implicit)
 <br><br><br>
